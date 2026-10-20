@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Coxinhas do Bairro - Entrega</title>
+</head>
+<body data-pagina="entrega">
+
+<header class="cabecalho" id="cabecalho"></header>
+
+<main class="conteudo duas-colunas">
+
+  <form class="caixa" id="form-entrega">
+    <h2>📍 Endereço de entrega</h2>
+    <p class="regra-frete">🛵 A cada <strong>5 km</strong> de distância da loja, o frete custa <strong>R$ 5,00</strong>.</p>
+
+    <label for="rua">Rua / Avenida</label>
+    <input type="text" id="rua" required>
+
+    <div class="linha">
+      <div>
+        <label for="numero">Número</label>
+        <input type="text" id="numero" required>
+      </div>
+      <div>
+        <label for="bairro">Bairro</label>
+        <select id="bairro" required></select>
+      </div>
+    </div>
+
+    <label for="complemento">Complemento (opcional)</label>
+    <input type="text" id="complemento" placeholder="Apto, bloco, referência...">
+
+    <label for="km">Distância da loja (km)</label>
+    <input type="number" id="km" min="0" step="0.1" required>
+
+    <button type="button" class="btn-claro" style="margin-top:12px" onclick="calcularFrete()">Calcular frete</button>
+    <div class="resultado-frete" id="resultado-frete"></div>
+
+    <button class="btn grande" type="submit">Ir para o pagamento →</button>
+  </form>
+
+  <aside class="caixa">
+    <h3 style="margin-top:0">Resumo do pedido</h3>
+    <div id="resumo"></div>
+  </aside>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+/* =====================================================
+   style.css  -  o visual de TODAS as páginas
+   ===================================================== */
+
+/* 1) CORES (iguais às da imagem). Mude aqui e muda no site todo! */
+:root {
+  --amarelo: #FCE9A8;        /* fundo do cabeçalho */
+  --laranja: #D9622B;        /* botões */
+  --laranja-escuro: #B84B1B; /* botões quando passa o mouse */
+  --marrom: #4A1E0E;         /* textos e títulos */
+  --texto-suave: #7C5B49;    /* textos pequenos */
+  --creme: #FFFAF0;          /* fundo da página e dos cartões */
+  --bege: #F4E4C8;           /* caixinhas e campos */
+  --borda: #EBD7B5;
+  --verde: #3F9B5B;
+  --vermelho: #C0392B;
+}
+
+/* 2) BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Nunito", "Segoe UI", Arial, sans-serif;
+  color: var(--marrom);
+  background: var(--creme);
+  min-height: 100vh;
+}
+a { color: var(--laranja); font-weight: 700; }
+h1, h2, h3 { line-height: 1.2; }
+
+/* 3) CABEÇALHO */
+.cabecalho {
+  background: var(--amarelo);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+  padding: 14px 5%;
+}
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--marrom); }
+.logo-circulo {
+  width: 54px; height: 54px; border-radius: 50%;
+  border: 3px solid var(--laranja); background: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-circulo svg { width: 32px; }
+.logo-texto { font-size: 22px; font-weight: 800; line-height: 1; }
+.menu { display: flex; align-items: center; gap: 22px; }
+.menu a { color: var(--marrom); text-decoration: none; font-weight: 700; }
+.menu a:hover { color: var(--laranja); }
+.link-carrinho { position: relative; }
+.contador {
+  position: absolute; top: -10px; right: -16px;
+  background: var(--laranja); color: #fff;
+  min-width: 20px; height: 20px; border-radius: 10px;
+  font-size: 12px; display: flex; align-items: center; justify-content: center;
+}
+.contador.pop { animation: pop 0.4s; }
+
+/* 4) FAIXA AMARELA DA HOME */
+.hero {
+  background: var(--amarelo);
+  display: flex; justify-content: center; align-items: center;
+  gap: 40px; flex-wrap: wrap;
+  padding: 10px 5% 50px;
+  border-bottom: 1px solid var(--borda);
+}
+.hero h1 { font-size: 34px; max-width: 460px; }
+.hero p { color: var(--texto-suave); margin-top: 10px; max-width: 420px; }
+.hero-coxinha { width: 130px; animation: flutuar 3s ease-in-out infinite; }
+
+/* 5) CONTEÚDO */
+.conteudo { max-width: 1100px; margin: 0 auto; padding: 30px 5% 60px; }
+.estreito { max-width: 720px; }
+.conteudo h2 { margin-bottom: 16px; }
+.conteudo h3 { margin: 26px 0 12px; color: var(--texto-suave); }
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+
+/* 6) CARTÃO DE PRODUTO */
+.produto {
+  background: #fff; border: 1px solid var(--borda); border-radius: 14px;
+  padding: 12px; display: flex; align-items: center; gap: 14px;
+  box-shadow: 0 3px 10px rgba(120, 70, 20, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.produto:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(120, 70, 20, 0.16); }
+.produto-img {
+  width: 80px; height: 80px; flex-shrink: 0; border-radius: 12px;
+  background: var(--bege); font-size: 38px;
+  display: flex; align-items: center; justify-content: center;
+}
+.produto-img { overflow: hidden; }
+.produto-img svg { width: 56px; }
+/* foto do produto: preenche o quadradinho sem esticar */
+.produto-img img { width: 100%; height: 100%; object-fit: cover; }
+.produto-info { flex: 1; }
+.produto-info h4 { font-size: 16px; }
+.produto-info p { font-size: 13px; color: var(--texto-suave); margin: 2px 0 6px; }
+.preco { color: var(--laranja); font-weight: 800; }
+.btn-mais {
+  width: 38px; height: 38px; border-radius: 50%; border: none;
+  background: var(--laranja); color: #fff; font-size: 22px; cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.btn-mais:hover { background: var(--laranja-escuro); transform: scale(1.15) rotate(90deg); }
+.btn-mais.pulou { animation: pop 0.4s; }
+
+/* 7) BOTÕES */
+.btn {
+  display: inline-block; text-decoration: none; text-align: center;
+  background: var(--laranja); color: #fff; border: none; border-radius: 10px;
+  padding: 12px 22px; font-size: 16px; font-weight: 800; font-family: inherit; cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn:hover { background: var(--laranja-escuro); transform: translateY(-2px); }
+.btn.grande { width: 100%; margin-top: 14px; }
+.btn-claro {
+  display: inline-block; text-decoration: none;
+  background: var(--bege); color: var(--marrom); border: none; border-radius: 10px;
+  padding: 10px 16px; font-weight: 700; font-family: inherit; cursor: pointer;
+}
+.btn-claro:hover { background: var(--borda); }
+.btn:disabled { opacity: 0.7; cursor: wait; transform: none; }
+
+/* 8) CAIXAS E FORMULÁRIOS */
+.caixa {
+  background: #fff; border: 1px solid var(--borda); border-radius: 14px;
+  padding: 22px; margin-bottom: 18px;
+  box-shadow: 0 3px 10px rgba(120, 70, 20, 0.08);
+  animation: aparecer 0.5s;
+}
+.centro { display: flex; justify-content: center; padding: 40px 5%; }
+.centro .caixa { width: 100%; max-width: 440px; }
+.sub { color: var(--texto-suave); margin-bottom: 10px; }
+label { display: block; font-weight: 700; font-size: 14px; margin: 14px 0 5px; }
+input, select {
+  width: 100%; padding: 12px; font-size: 15px; font-family: inherit;
+  border: 1.5px solid var(--borda); border-radius: 10px; background: #FFF6E6; color: var(--marrom);
+}
+input:focus, select:focus { outline: none; border-color: var(--laranja); box-shadow: 0 0 0 3px rgba(217, 98, 43, 0.2); }
+.linha { display: flex; gap: 12px; }
+.linha > div { flex: 1; }
+.entre { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 14px; }
+.check { display: flex; align-items: center; gap: 6px; margin: 0; font-weight: 400; }
+.check input { width: auto; }
+.erro { color: var(--vermelho); font-weight: 700; min-height: 22px; margin-top: 10px; font-size: 14px; }
+.shake { animation: tremer 0.4s; }
+.texto-centro { text-align: center; margin-top: 16px; font-size: 14px; }
+.dica { background: var(--amarelo); border-radius: 10px; padding: 12px; margin-top: 18px; font-size: 13px; }
+.dica button { margin-top: 8px; }
+
+/* 9) CARRINHO E RESUMOS */
+.item-carrinho { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--borda); flex-wrap: wrap; }
+.item-carrinho:last-child { border-bottom: none; }
+.item-carrinho .produto-img { width: 56px; height: 56px; font-size: 28px; }
+.item-carrinho .produto-img svg { width: 38px; }
+.item-nome { flex: 1; min-width: 140px; font-weight: 700; }
+.quantidade { display: flex; align-items: center; gap: 8px; }
+.quantidade button { width: 30px; height: 30px; border-radius: 50%; border: none; background: var(--bege); font-size: 18px; cursor: pointer; }
+.quantidade button:hover { background: var(--laranja); color: #fff; }
+.lixeira { background: none; border: none; font-size: 20px; cursor: pointer; }
+.vazio { text-align: center; padding: 30px 0; color: var(--texto-suave); }
+.linha-resumo { display: flex; justify-content: space-between; padding: 6px 0; }
+.linha-resumo.total { border-top: 2px solid var(--borda); margin-top: 8px; padding-top: 12px; font-size: 20px; font-weight: 800; }
+.acoes { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.duas-colunas { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; align-items: start; }
+@media (max-width: 800px) { .duas-colunas { grid-template-columns: 1fr; } }
+
+/* 10) FRETE */
+.regra-frete { background: var(--bege); border-radius: 10px; padding: 10px 14px; font-size: 14px; margin-bottom: 6px; }
+.resultado-frete { background: #EAF6EE; border: 1px solid var(--verde); border-radius: 10px; padding: 12px; margin-top: 14px; animation: aparecer 0.4s; }
+.resultado-frete:empty { display: none; }
+
+/* 11) CARTÃO DE CRÉDITO QUE VIRA */
+.cartao-area { perspective: 1000px; margin-bottom: 10px; }
+.cartao-3d {
+  position: relative; width: 100%; max-width: 340px; height: 200px; margin: 0 auto;
+  transform-style: preserve-3d; transition: transform 0.7s;
+}
+.cartao-3d.virado { transform: rotateY(180deg); }
+.cartao-face {
+  position: absolute; inset: 0; border-radius: 16px; padding: 20px; color: #fff;
+  backface-visibility: hidden; box-shadow: 0 10px 24px rgba(74, 30, 14, 0.35);
+}
+.frente { background: linear-gradient(135deg, #D9622B, #7A2E0F); }
+.verso { background: linear-gradient(135deg, #7A2E0F, #4A1E0E); transform: rotateY(180deg); }
+.chip { width: 42px; height: 30px; border-radius: 6px; background: #F0C75E; }
+.bandeira { position: absolute; top: 20px; right: 20px; font-weight: 800; font-style: italic; }
+.cartao-numero { font-family: "Courier New", monospace; font-size: 20px; letter-spacing: 2px; margin: 26px 0 16px; }
+.cartao-baixo { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; }
+.cartao-baixo small { display: block; font-size: 10px; opacity: 0.8; font-weight: 400; }
+.tarja { background: #000; height: 40px; margin: 10px -20px 18px; }
+.cvv-box { background: #fff; color: #000; text-align: right; padding: 8px 10px; border-radius: 4px; font-family: "Courier New", monospace; }
+.aviso-teste { font-size: 12px; color: var(--texto-suave); text-align: center; margin-top: 10px; }
+.spinner { display: inline-block; width: 14px; height: 14px; border: 3px solid #fff; border-top-color: transparent; border-radius: 50%; margin-right: 8px; vertical-align: -2px; animation: girar 0.8s linear infinite; }
+
+/* 12) PEDIDO CONFIRMADO */
+.sucesso { text-align: center; }
+.check-grande {
+  width: 90px; height: 90px; border-radius: 50%; background: var(--verde); color: #fff;
+  font-size: 52px; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center;
+  animation: pop 0.6s;
+}
+
+/* 13) AVISO QUE APARECE EMBAIXO (toast) */
+.aviso {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  background: var(--marrom); color: #fff; padding: 12px 22px; border-radius: 30px;
+  font-weight: 700; z-index: 10; animation: subir 0.3s;
+}
+
+/* 14) RODAPÉ */
+.rodape { text-align: center; padding: 20px; color: var(--texto-suave); font-size: 13px; }
+
+/* 15) ANIMAÇÕES (@keyframes = o "filme" do movimento) */
+@keyframes flutuar { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-14px) rotate(4deg); } }
+@keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.4); } 100% { transform: scale(1); } }
+@keyframes aparecer { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes tremer { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+@keyframes subir { from { opacity: 0; transform: translate(-50%, 20px); } to { opacity: 1; transform: translate(-50%, 0); } }
+@keyframes girar { to { transform: rotate(360deg); } }
+
+/* quem prefere menos movimento no celular/computador */
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

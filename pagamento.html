@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Coxinhas do Bairro - Pagamento</title>
+</head>
+<body data-pagina="pagamento">
+
+<header class="cabecalho" id="cabecalho"></header>
+
+<main class="conteudo duas-colunas">
+
+  <form class="caixa" id="form-pagamento">
+    <h2>💳 Pagamento</h2>
+
+    <div class="cartao-area">
+      <div class="cartao-3d" id="cartao">
+        <div class="cartao-face frente">
+          <div class="chip"></div>
+          <div class="bandeira" id="bandeira">CARTÃO</div>
+          <div class="cartao-numero" id="cartao-numero">•••• •••• •••• ••••</div>
+          <div class="cartao-baixo">
+            <div><small>NOME</small><span id="cartao-nome">SEU NOME</span></div>
+            <div><small>VALIDADE</small><span id="cartao-validade">MM/AA</span></div>
+          </div>
+        </div>
+        <div class="cartao-face verso">
+          <div class="tarja"></div>
+          <div class="cvv-box" id="cartao-cvv">•••</div>
+        </div>
+      </div>
+    </div>
+
+    <label for="numero">Número do cartão</label>
+    <input type="text" id="numero" inputmode="numeric" placeholder="0000 0000 0000 0000" autocomplete="off" required>
+
+    <label for="nome">Nome impresso no cartão</label>
+    <input type="text" id="nome" placeholder="Como está no cartão" autocomplete="off" required>
+
+    <div class="linha">
+      <div>
+        <label for="validade">Validade</label>
+        <input type="text" id="validade" inputmode="numeric" placeholder="MM/AA" autocomplete="off" required>
+      </div>
+      <div>
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" inputmode="numeric" placeholder="123" autocomplete="off" required>
+      </div>
+    </div>
+
+    <label for="parcelas">Parcelas</label>
+    <select id="parcelas"></select>
+
+    <p class="erro" id="erro"></p>
+    <button class="btn grande" type="submit" id="botao-pagar">Pagar</button>
+    <p class="aviso-teste">🔒 Pagamento de mentirinha. Não digite dados de um cartão de verdade.</p>
+  </form>
+
+  <aside class="caixa">
+    <h3 style="margin-top:0">Resumo do pedido</h3>
+    <div id="resumo"></div>
+    <div id="dados-entrega" class="sub" style="margin-top:14px"></div>
+  </aside>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
