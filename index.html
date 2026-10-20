@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Coxinhas do Bairro - Cardápio</title>
+</head>
+<body data-pagina="cardapio">
+
+<header class="cabecalho" id="cabecalho"></header>
+
+<section class="hero">
+  <div>
+    <h1>Coxinhas quentinhas, do jeitinho que a gente gosta!</h1>
+    <p>Escolha suas favoritas, coloque no carrinho e receba em casa.</p>
+  </div>
+  <div class="hero-coxinha" id="hero-coxinha"></div>
+</section>
+
+<main class="conteudo">
+
+ 
+  <h2>🍴 Cardápio de coxinhas</h2>
+  <div class="grade">
+
+    <!-- Coxinha de Camarão -->
+    <div class="produto">
+      <div class="produto-img"><img src="camarao.png" alt="Coxinha de Camarão"></div>
+      <div class="produto-info">
+        <h4>Coxinha de Camarão</h4>
+        <p>Camarão cremoso com catupiry</p>
+        <span class="preco">R$ 22,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(11, this)">+</button>
+    </div>
+    <!-- Coxinha de Charque -->
+    <div class="produto">
+      <div class="produto-img"><img src="charque.png" alt="Coxinha de Charque"></div>
+      <div class="produto-info">
+        <h4>Coxinha de Charque</h4>
+        <p>Charque desfiado e bem temperado</p>
+        <span class="preco">R$ 12,50</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(12, this)">+</button>
+    </div>
+    <!-- Coxinha de Frango -->
+    <div class="produto">
+      <div class="produto-img"><img src="frango.png" alt="Coxinha de Frango"></div>
+      <div class="produto-info">
+        <h4>Coxinha de Frango</h4>
+        <p>Frango desfiado • Massa crocante</p>
+        <span class="preco">R$ 10,50</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(13, this)">+</button>
+    </div>
+    <!-- Coxinha de Queijo -->
+    <div class="produto">
+      <div class="produto-img"><img src="queijo.png" alt="Coxinha de Queijo"></div>
+      <div class="produto-info">
+        <h4>Coxinha de Queijo</h4>
+        <p>Queijo derretido por dentro</p>
+        <span class="preco">R$ 12,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(14, this)">+</button>
+    </div>
+    <!-- Coxinha de Carne de Sol -->
+    <div class="produto">
+      <div class="produto-img"><img src="carne.png" alt="Coxinha de Carne de Sol"></div>
+      <div class="produto-info">
+        <h4>Coxinha de Carne de Sol</h4>
+        <p>Carne de sol com queijo coalho</p>
+        <span class="preco">R$ 18,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(15, this)">+</button>
+    </div>
+    <!-- Coxinha Vegetariana -->
+    <div class="produto">
+      <div class="produto-img"><img src="jaca.png" alt="Coxinha Vegetariana"></div>
+      <div class="produto-info">
+        <h4>Coxinha Vegetariana</h4>
+        <p>Legumes refogados e ervas</p>
+        <span class="preco">R$ 16,50</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(16, this)">+</button>
+    </div>
+
+  </div>
+
+  
+  <h2 style="margin-top:36px">🍰 Sobremesas</h2>
+  <div class="grade">
+
+   
+    <div class="produto">
+      <div class="produto-img"><img src="morango1.png" alt="Coxinha de Morango com Brigadeiro Tradicional"></div>
+      <div class="produto-info">
+        <h4>Coxinha de Morango com Brigadeiro Tradicional</h4>
+        <p>Morango com brigadeiro de chocolate</p>
+        <span class="preco">R$ 10,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(21, this)">+</button>
+    </div>
+    
+    <div class="produto">
+      <div class="produto-img"><img src="morango2.png" alt="Coxinha de Morango com Brigadeiro de Leite Ninho"></div>
+      <div class="produto-info">
+        <h4>Coxinha de Morango com Brigadeiro de Leite Ninho</h4>
+        <p>Morango com brigadeiro de leite ninho</p>
+        <span class="preco">R$ 10,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(22, this)">+</button>
+    </div>
+    
+    <div class="produto">
+      <div class="produto-img"><img src="doce.png" alt="Coxinha de Doce de Leite com Canela"></div>
+      <div class="produto-info">
+        <h4>Coxinha de Doce de Leite com Canela</h4>
+        <p>Doce de leite cremoso e canela</p>
+        <span class="preco">R$ 10,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(23, this)">+</button>
+    </div>
+    <!-- Pudim de Leite Tradicional -->
+    <div class="produto">
+      <div class="produto-img"><img src="pudim.png" alt="Pudim de Leite Tradicional"></div>
+      <div class="produto-info">
+        <h4>Pudim de Leite Tradicional</h4>
+        <p>Fatia com calda de caramelo</p>
+        <span class="preco">R$ 12,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(24, this)">+</button>
+    </div>
+
+  </div>
+
+  
+  <h2 style="margin-top:36px">✨ Turbine seu pedido</h2>
+
+  
+  <h3>Molhos</h3>
+  <div class="grade">
+
+    
+    <div class="produto">
+      <div class="produto-img"><img src="pimenta.png" alt="Molho de Pimenta"></div>
+      <div class="produto-info">
+        <h4>Molho de Pimenta</h4>
+        <p>Picante artesanal</p>
+        <span class="preco">R$ 1,50</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(31, this)">+</button>
+    </div>
+    
+    <div class="produto">
+      <div class="produto-img"><img src="maionese.png" alt="Maionese Temperada"></div>
+      <div class="produto-info">
+        <h4>Maionese Temperada</h4>
+        <p>Alho e ervas</p>
+        <span class="preco">R$ 1,50</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(32, this)">+</button>
+    </div>
+
+  </div>
+
+  
+  <h3>Bebidas</h3>
+  <div class="grade">
+
+    <div class="produto">
+      <div class="produto-img"><img src="laranja.png" alt="Suco de Laranja 300ml"></div>
+      <div class="produto-info">
+        <h4>Suco de Laranja 300ml</h4>
+        <p>Natural, feito na hora</p>
+        <span class="preco">R$ 9,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(41, this)">+</button>
+    </div>
+    
+    <div class="produto">
+      <div class="produto-img"><img src="maracuja.png" alt="Suco de Maracujá 300ml"></div>
+      <div class="produto-info">
+        <h4>Suco de Maracujá 300ml</h4>
+        <p>Natural, feito na hora</p>
+        <span class="preco">R$ 9,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(42, this)">+</button>
+    </div>
+   
+    <div class="produto">
+      <div class="produto-img"><img src="coca.png" alt="Refrigerante Cola 350ml"></div>
+      <div class="produto-info">
+        <h4>Refrigerante Cola 350ml</h4>
+        <p>Lata gelada</p>
+        <span class="preco">R$ 9,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(43, this)">+</button>
+    </div>
+    
+    <div class="produto">
+      <div class="produto-img"><img src="guarana.png" alt="Guaraná 350ml"></div>
+      <div class="produto-info">
+        <h4>Guaraná 350ml</h4>
+        <p>Lata gelada</p>
+        <span class="preco">R$ 9,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(44, this)">+</button>
+    </div>
+    
+    <div class="produto">
+      <div class="produto-img"><img src="agua.png" alt="Água Mineral 500ml"></div>
+      <div class="produto-info">
+        <h4>Água Mineral 500ml</h4>
+        <p>Sem gás</p>
+        <span class="preco">R$ 4,00</span>
+      </div>
+      <button class="btn-mais" onclick="clicouAdicionar(45, this)">+</button>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:40px">
+    <a class="btn" href="carrinho.html">Ver meu carrinho 🛒</a>
+  </div>
+</main>
+
+<footer class="rodape">Coxinhas do Bairro • Recife </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
