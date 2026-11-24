@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Cadastro de fornecedor - Coxinhas do Bairro</title>
+</head>
+<body data-pagina="cadastro-fornecedor">
+  <header class="cabecalho" id="cabecalho"></header>
+  <main class="centro">
+    <form class="caixa" id="form-cadastro-fornecedor">
+      <h2>🥤 Cadastro de novo fornecedor</h2>
+      <p class="sub">Cadastre sua empresa para solicitar acesso à área do fornecedor. O acesso será liberado após aprovação do administrador.</p>
+
+      <label for="empresa">Nome da empresa</label>
+      <input type="text" id="empresa" placeholder="Nome da sua empresa" required>
+
+      <label for="contato">Nome do responsável</label>
+      <input type="text" id="contato" placeholder="Seu nome" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="seuemail@empresa.com" required>
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+
+      <label for="categoria">Tipo de produto fornecido</label>
+      <select id="categoria" required>
+        <option value="">Selecione uma categoria</option>
+        <option value="bebida">Bebidas</option>
+        <option value="coxinha">Coxinhas e salgados</option>
+        <option value="sobremesa">Sobremesas</option>
+        <option value="molho">Molhos e acompanhamentos</option>
+      </select>
+
+      <label for="senha">Criar senha</label>
+      <input type="password" id="senha" placeholder="Mínimo de 6 caracteres" minlength="6" required>
+
+      <label for="senha2">Confirmar senha</label>
+      <input type="password" id="senha2" placeholder="Digite a senha novamente" required>
+
+      <p class="erro" id="erro" aria-live="polite"></p>
+      <button class="btn grande" type="submit">Enviar cadastro →</button>
+      <p class="texto-centro">Já tem cadastro? <a href="fornecedor-login.html">Entrar como fornecedor</a></p>
+      <p class="texto-centro"><a href="index.html">Voltar ao site</a></p>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

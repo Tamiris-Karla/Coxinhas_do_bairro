@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Coxinhas do Bairro - Login</title>
+</head>
+<body data-pagina="login">
+
+<header class="cabecalho" id="cabecalho"></header>
+
+<main class="centro">
+  <form class="caixa" id="form-login">
+    <h2>🔑 Login</h2>
+    <p class="sub">Bem-vinda de volta!</p>
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+
+    <label for="senha">Senha</label>
+    <input type="password" id="senha" placeholder="Sua senha" required>
+
+    <div class="entre">
+      <label class="check"><input type="checkbox" id="lembrar"> Lembrar de mim</label>
+      <a href="#" onclick="esqueceuSenha()">Esqueceu a senha?</a>
+    </div>
+
+    <p class="erro" id="erro"></p>
+    <button class="btn grande" type="submit">Entrar →</button>
+
+    <p class="texto-centro">Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+
+  </form>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
