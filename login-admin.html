@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Login do administrador - Coxinhas do Bairro</title>
+</head>
+<body data-pagina="login-admin" data-tipo-login="admin">
+  <header class="cabecalho" id="cabecalho"></header>
+  <main class="centro">
+    <form class="caixa" id="form-login">
+      <h2>🛠️ Acesso administrativo</h2>
+      <p class="sub">Entre com a conta autorizada para acessar o painel da loja.</p>
+      <label for="email">E-mail do administrador</label>
+      <input type="email" id="email" placeholder="seuemail@exemplo.com" autocomplete="username" required>
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Sua senha" autocomplete="current-password" required>
+      <div class="entre">
+        <label class="check"><input type="checkbox" id="lembrar"> Lembrar de mim</label>
+      </div>
+      <p class="erro" id="erro" role="alert"></p>
+      <button class="btn grande" type="submit">Entrar no painel →</button>
+      <p class="texto-centro"><a href="index.html">Voltar ao site</a></p>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

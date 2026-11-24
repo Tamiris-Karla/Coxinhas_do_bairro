@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Login do fornecedor - Coxinhas do Bairro</title>
+</head>
+<body data-pagina="login-fornecedor" data-tipo-login="fornecedor">
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main class="centro">
+    <form class="caixa" id="form-login">
+      <h2>🥤 Acesso do fornecedor</h2>
+      <p class="sub">Entre para consultar os produtos que precisam de reposição.</p>
+
+      <label for="email">E-mail do fornecedor</label>
+      <input type="email" id="email" placeholder="seuemail@fornecedor.com" required>
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Sua senha" required>
+
+      <div class="entre">
+        <label class="check"><input type="checkbox" id="lembrar"> Lembrar de mim</label>
+      </div>
+
+      <p class="erro" id="erro"></p>
+      <button class="btn grande" type="submit">Entrar na área do fornecedor →</button>
+
+      <p class="texto-centro">Ainda não é fornecedor? <a href="cadastro-fornecedor.html">Cadastre sua empresa aqui</a>.</p>
+      <p class="texto-centro"><a href="index.html">Voltar ao site</a></p>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
